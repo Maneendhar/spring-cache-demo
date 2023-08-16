@@ -13,6 +13,7 @@
 	<artifactId>spring-cache-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Spring-Cache-Demo</name>
+	<packaging>war</packaging>
 	<description>Demo project for implementation of Spring Cache</description>
 	<properties>
 		<java.version>1.8</java.version>
