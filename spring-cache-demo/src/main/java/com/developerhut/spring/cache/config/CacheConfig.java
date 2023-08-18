@@ -42,11 +42,11 @@ public class CacheConfig {
 	}
 
 //	@Scheduled(fixedRate = 15000, initialDelay = 15000)
-	public void clearCache() {
-		System.out.println("****** clearing the Cache");
-		Stream<String> parallelStream = cacheManager.getCacheNames().parallelStream();
-		parallelStream.forEach(name -> cacheManager.getCache(name).clear());
-//		.forEach(name -> cacheManager.getCache(name).clear());
-	}
+//	public void clearCache() {
+//		System.out.println("****** clearing the Cache");
+//		Stream<String> parallelStream = cacheManager.getCacheNames().parallelStream();
+//		parallelStream.forEach(name -> cacheManager.getCache(name).clear());
+////		.forEach(name -> cacheManager.getCache(name).clear());
+//	}
 
 }
