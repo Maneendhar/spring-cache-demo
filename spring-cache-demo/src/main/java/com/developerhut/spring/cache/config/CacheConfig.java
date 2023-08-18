@@ -1,6 +1,7 @@
 package com.developerhut.spring.cache.config;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 import javax.annotation.PostConstruct;
 
@@ -43,7 +44,9 @@ public class CacheConfig {
 //	@Scheduled(fixedRate = 15000, initialDelay = 15000)
 	public void clearCache() {
 		System.out.println("****** clearing the Cache");
-		cacheManager.getCacheNames().parallelStream().forEach(name -> cacheManager.getCache(name).clear());
+		Stream<String> parallelStream = cacheManager.getCacheNames().parallelStream();
+		parallelStream.forEach(name -> cacheManager.getCache(name).clear());
+//		.forEach(name -> cacheManager.getCache(name).clear());
 	}
 
 }
